@@ -1,0 +1,31 @@
+<!-- <ul>
+    <li *ngFor="let team of teamList">{{team}}
+        <img src=`${team}.png` alt=`${team}.png`>
+    </li>
+</ul> -->
+<ul class="teams">
+    <li>
+        <img (click)="onClick('Avengers')" src="../../assets/images/Avengers-Logo.jpg" width=100>
+    </li>
+    <li>
+        <img (click)="onClick('Xmen')" src="../../assets/images/xmen-logo.png" width=80>
+    </li>
+    <li>
+        <img (click)="onClick('Defenders')" src="../../assets/images/Defenders-logo.png" width=100>
+    </li>
+</ul>
+<!-- selectedteam = {{selectedTeam}} -->
+<ul class="heroes">
+    <ng-container *ngFor="let hero of heroes">
+        <li class="hero-card" *ngIf="hero.team === selectedTeam">
+            <a  routerLink="../detail/{{hero.id}}" >
+                <img class="pin" src={{hero.pin}} width="100" height="140">
+                <div class="name">{{hero.name}}</div>
+            </a>
+        </li>
+    </ng-container>
+</ul>
+<!-- 
+https://1000logos.net/wp-content/uploads/2019/08/Avengers-Logo-2015.jpg
+"https://www.pngtube.com/myfile/detail/327-3279539_original-x-men-logo.png"
+"https://i0.wp.com/wordofthenerdonline.com/wp-content/uploads/2017/07/14/Defenders-logo.png?w=600&ssl=1 -->

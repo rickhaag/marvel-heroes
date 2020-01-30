@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-card {
+    height: 140px;
+    width: 100px;
+    list-style-type: none;
+    margin: 5px;
+    position: relative;
+}
+
+.hero-card:hover {
+    box-shadow: 5px 5px rgb(185, 177, 59);
+}
+
+.name {
+    color: black;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    text-shadow: 2px 2px 2px white;
+}
+
+.name:visited {
+    color: black;
+}

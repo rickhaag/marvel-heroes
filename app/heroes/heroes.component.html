@@ -1,0 +1,8 @@
+<ul>
+    <li class="hero-card" *ngFor="let hero of heroes">
+        <a routerLink="../detail/{{hero.id}}">
+            <img class="pin" src={{hero.pin}} width="100" height="140" alt="{{hero.name}} picture">
+            <div class="name">{{hero.name}}</div>
+        </a>
+    </li>
+</ul>
