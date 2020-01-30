@@ -11,6 +11,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { TeamsComponent } from './teams/teams.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HttpsearchComponent } from './httpsearch/httpsearch.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     NavBarComponent,
     HeroesComponent,
     TeamsComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HttpsearchComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     FormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
+      InMemoryDataService, { dataEncapsulation: false, passThruUnknownUrl: true }
     )
   ],
   providers: [],

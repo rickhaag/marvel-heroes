@@ -12,22 +12,20 @@ export class TeamsComponent implements OnInit {
 heroes: Hero[];
 selectedTeam = "";
 
-
-
   getHeroes(): void {
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   }
 
- onClick(teamClick: string) {
-   this.selectedTeam = teamClick;
+  onClick(teamClick: string) {
+    this.selectedTeam = teamClick;
  }
-
 
   constructor(private heroService: HeroService) {
 
   }
 
   ngOnInit() {
+    
     this.getHeroes();
 
   }

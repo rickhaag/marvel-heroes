@@ -1,0 +1,37 @@
+<h4>Search by name, real name, or id(1 thru 563)</h4>
+<input type="text" class="input" [(ngModel)]="searchParam" (keyup.enter)="search();
+    value=''" placeholder="hero name">
+<button class="btn" (click)="search()">Go</button>
+<button class="btn" (click)="clearSearch()">clear</button>
+
+<div *ngIf="searched">
+    <h1 class="detail-name">{{hero?.name}}</h1>
+    <div class="hero-detail">
+        <!-- <h1 class="detail-name">{{hero?.name}}</h1> -->
+        <div><img class="detail-image" src={{hero?.pin}}></div>
+        <div class="details">
+            <li>
+                <div class="score-line">
+                    <h3>Intelligence </h3>
+                    <h3 class="score">{{hero?.intelligence}}</h3>
+                </div>
+                <span class="bar"><span class="int"></span></span>
+            </li>
+            <li>
+                <div class="score-line">
+                    <h3>Strength </h3>
+                    <h3 class="score">{{hero?.strength}}</h3>
+                </div>
+                    <span class="bar"><span class="str"></span></span>
+            </li>
+            <li>
+                <div class="score-line">
+                    <h3>Combat </h3>
+                    <h3 class="score">{{hero?.combat}}</h3>
+                </div>
+                <span class="bar"><span class="com"></span></span>
+            </li>
+            <h3>Team: <br>{{hero?.team}}</h3>
+        </div>
+    </div>
+</div>
